@@ -32,6 +32,13 @@ const todos = [{
   completed: false,
 }]
 
+app.get("/todo", (req, res) => {
+  const todo = todos.find(t => t.id == req.query.id);
+  res.json({
+    todo
+  })
+})
+
 app.get("/todos", (req, res) => {
   const randomTodos = [];
   for (let i = 0; i < 5; i++) {

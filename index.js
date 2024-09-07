@@ -85,4 +85,6 @@ app.get("/notifications", (req, res) => {
 
 })
 
-app.listen(8080)
+app.listen(8081,"0.0.0.0",()=>{
+  console.log("Server is Running On port: 8080")
+})
